@@ -10,6 +10,11 @@ public class UserProfile {
         this.pass = new UserPassword(pass);
         this.email = new UserEmail(email);
     }
+    public UserProfile(String login, String pass) {
+        this.login = new UserName(login);
+        this.pass = new UserPassword(pass);
+        this.email = new UserEmail(login + "@mail.ru");
+    }
 
     public UserProfile(String login) {
         this.login = new UserName(login);

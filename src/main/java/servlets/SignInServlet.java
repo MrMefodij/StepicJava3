@@ -34,7 +34,6 @@ public class SignInServlet extends HttpServlet {
             return;
         }
 
-        accountService.addSession(request.getSession().getId(), profile);
         response.getWriter().println("Authorized: " + profile.getLogin().getUserName());
         response.setStatus(HttpServletResponse.SC_OK);
     }
